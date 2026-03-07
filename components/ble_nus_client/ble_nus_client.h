@@ -54,7 +54,7 @@ class BLENUSClientComponent : public uart::UARTComponent, public ble_client::BLE
   bool read_byte(uint8_t *data);
   bool peek_byte(uint8_t *data) override;
   bool read_array(uint8_t *data, size_t len) override;
-  int available() override;
+  size_t available() override;
   void flush() override;
 
   void check_logger_conflict() override {}
